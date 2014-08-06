@@ -121,6 +121,13 @@ def get_ranked_common_passwords():
             lst.append(line.strip())
     return lst
 
+def get_ranked_dutch():
+    lst = []
+    for line in codecs.open('../data/dutch10000.txt', 'r', 'iso-8859-1'):
+        if line.strip():
+            lst.append(line.strip())
+    return lst
+
 def to_ranked_dict(lst):
     return dict((word, i) for i, word in enumerate(lst))
 
@@ -148,12 +155,13 @@ def filter_ascii(lst):
 
 def main():
     english = get_ranked_english()
+    dutch = get_ranked_dutch()
     surnames, male_names, female_names = get_ranked_census_names()
     passwords = get_ranked_common_passwords()
 
-    [english,
+    [english, dutch,
      surnames, male_names, female_names,
-     passwords] = [filter_ascii(filter_short(lst)) for lst in (english,
+     passwords] = [filter_ascii(filter_short(lst)) for lst in (english, dutch,
                                                                surnames, male_names, female_names,
                                                                passwords)]
 
@@ -164,11 +172,12 @@ def main():
     female_names = filter_dup(female_names, all_dicts - set([tuple(female_names)]))
     surnames     = filter_dup(surnames,     all_dicts - set([tuple(surnames)]))
     english      = filter_dup(english,      all_dicts - set([tuple(english)]))
+    dutch        = filter_dup(dutch,        all_dicts - set([tuple(dutch)]))
 
     with open('../generated/frequency_lists.json', 'w') as f: # words are all ascii at this point
         lsts = locals()
         out = {}
-        for lst_name in 'passwords male_names female_names surnames english'.split():
+        for lst_name in 'passwords male_names female_names surnames english dutch'.split():
             lst = lsts[lst_name]
             out[lst_name] = lst
         json.dump(out, f)
@@ -179,6 +188,7 @@ def main():
     print 'female.......', len(female_names)
     print 'surnames.....', len(surnames)
     print 'english......', len(english)
+    print 'dutch........', len(dutch)
     print
 
 if __name__ == '__main__':
