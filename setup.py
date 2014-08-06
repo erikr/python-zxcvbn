@@ -1,11 +1,11 @@
 from distutils.core import setup
 
-setup(name='zxcvbn',
+setup(name='zxcvbn-dutch',
       version='1.0',
-      description='Password strength estimator',
-      author='Ryan Pearl',
-      author_email='rpearl@dropbox.com',
-      url='https://www.github.com/rpearl/python-zxcvbn',
+      description='Password strength estimator with Dutch support',
+      author='Erik Romijn',
+      author_email='github@erik.io',
+      url='https://www.github.com/erikr/python-zxcvbn',
       packages=['zxcvbn'],
       package_data={'zxcvbn': ['generated/frequency_lists.json', 'generated/adjacency_graphs.json']}
      )

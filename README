@@ -4,6 +4,9 @@ matching and conservative entropy calculations. It finds 10k common passwords,
 common American names and surnames, common English words, and common patterns
 like dates, repeats (aaa), sequences (abcd), and QWERTY patterns.
 
+All the hard work on the Python port been done by Ryan Pearl, in his
+original python-zxcvbn package. This version adds a Dutch word list. 
+
 Please refer to http://tech.dropbox.com/?p=165 for the full details and
 motivation behind zxcbvn. The source code for the original JavaScript (well,
 actually CoffeeScript) implementation can be found at:
