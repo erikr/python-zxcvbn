@@ -19,6 +19,16 @@ For full motivation, see:
 http://tech.dropbox.com/?p=165
 
 ------------------------------------------------------------------------
+Install
+------------------------------------------------------------------------
+This project is available from PyPI as zxcvbn-dutch:
+https://pypi.python.org/pypi/zxcvbn-dutch
+
+You can install it with: `pip install zxcvbn-dutch`
+If you haven an existing Python version of zxcvbn installed, it is 
+recommended to uninstall it before installing zxcvbn-dutch.
+
+------------------------------------------------------------------------
 Use
 ------------------------------------------------------------------------
 
