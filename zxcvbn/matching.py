@@ -95,13 +95,13 @@ def _calc_average_degree(graph):
 _load_frequency_lists()
 _load_adjacency_graphs()
 
-KEYBOARD_AVERAGE_DEGREE = _calc_average_degree(GRAPHS[u'qwerty'])
+KEYBOARD_AVERAGE_DEGREE = _calc_average_degree(GRAPHS['qwerty'])
 
 # slightly different for keypad/mac keypad, but close enough
-KEYPAD_AVERAGE_DEGREE = _calc_average_degree(GRAPHS[u'keypad'])
+KEYPAD_AVERAGE_DEGREE = _calc_average_degree(GRAPHS['keypad'])
 
-KEYBOARD_STARTING_POSITIONS = len(GRAPHS[u'qwerty'])
-KEYPAD_STARTING_POSITIONS = len(GRAPHS[u'keypad'])
+KEYBOARD_STARTING_POSITIONS = len(GRAPHS['qwerty'])
+KEYPAD_STARTING_POSITIONS = len(GRAPHS['keypad'])
 
 
 #-------------------------------------------------------------------------------
