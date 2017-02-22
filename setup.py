@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='zxcvbn-dutch',
-      version='1.0',
+      version='1.1',
       description='Password strength estimator with Dutch support',
       author='Erik Romijn',
       author_email='github@erik.io',
